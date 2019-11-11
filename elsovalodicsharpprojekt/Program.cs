@@ -137,8 +137,48 @@ namespace ElsoValodiCharpProjekt
             {
                 Console.WriteLine("A feladat nem megoldható!");
             }*/
+            /* 15.Feladat:*//*elso megoldas*/
+            
+           /* Console.WriteLine("Kérem a pozitív egész szám");
+            int bemenoSzam = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+
+            while (i < bemenoSzam)
+            {
+                Console.Write(i + " ");
+                i = i + 1;
+            }
+           /*masodig megoldas
+            string kiiratas = "";
+
+            for (int i = 1; i <= bemenoSzam; i++)
+            {
+                if (i == bemenoSzam)
+                {
+                    kiiratas += i + " ";
+                    Console.Write($"{i}");
+                }
+                else
+                {
+                    if (i != 0)
+                    {
+                        Console.Write($"{i}, ");
+                    }
+                }
+
+            }*/
+            /*16. Feladat:*/
+            Console.WriteLine("Kérem a pozitív egész szám");
+            int bemenoSzam = Convert.ToInt32(Console.ReadLine());
+
+
+
 
             Console.ReadKey(true);
         }
     }
 }
+
+
+
+    
