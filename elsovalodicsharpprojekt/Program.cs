@@ -137,6 +137,87 @@ namespace ElsoValodiCharpProjekt
             {
                 Console.WriteLine("A feladat nem megoldható!");
             }*/
+            /* 8. Feladat:
+           Console.Write("Adj meg egy számot: ");
+           int szamA = Convert.ToInt32(Console.ReadLine());
+           Console.Write("Adj meg egy másik számot: ");
+           int szamB = Int32.Parse(Console.ReadLine());
+           if (szamA >= 0 && szamB >= 0)
+           {
+               double szamtani = ((double)szamA + szamB) / 2;
+               double mertani = Math.Sqrt(szamA * szamB);
+               Console.WriteLine($"A két szám: {szamA} és {szamB} számtani közepe: {szamtani}");
+               Console.WriteLine($"A két szám: {szamA} és {szamB} mértani közepe: {mertani}");
+           }
+           else
+           {
+               Console.WriteLine("A feladat nem megoldható!");
+           }*/
+
+            /* 9. - 10. Feladat:
+                Console.Write("Kérse(Consolrem az első együtthatót: ");
+                int a = Int32.Pae.ReadLine());
+                Console.Write("Kérem a második együtthatót: ");
+                int b = Int32.Parse(Console.ReadLine());
+                Console.Write("Kérem a harmadik együtthatót: ");
+                int c = Int32.Parse(Console.ReadLine());
+                double x1 = 0.0d;
+                double x2 = 0.0d;
+                int d = b * b - 4 * a * c;
+                bool vanE = d < 0;
+                if (vanE)
+                {
+                    Console.WriteLine("Az egyenletnek nincsen valós megoldása.");
+                }
+                else
+                {
+                    if (d == 0)
+                    {
+                        x1 = (-b + Math.Sqrt(d)) / (2 * a);
+                        Console.WriteLine($"Az egyenletnek egyetlen valós megoldása van: {x1}");
+                    }
+                    else
+                    {
+                        x1 = (-b + Math.Sqrt(d)) / (2 * a);
+                        x2 = (-b - Math.Sqrt(d)) / (2 * a);
+                        Console.WriteLine($"Az egyenlet megoldásai: {x1} és {x2}");
+                    }
+                }*/
+
+            /* 11. Feladat:
+            Console.Write("Kérem az első befogót: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Kérem a második befogót: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            double c = Math.Sqrt(Math.Pow(a, 2) + b * b);
+            Console.WriteLine($"Az átfogó hossza: {c:F2}");*/
+
+            /* 12. Feladat:
+            Console.Write("Kérem az első oldal hosszát: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Kérem a második oldal hosszát: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Kérem a harmadik oldal hosszát: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            int f = 2 * (a * b + a * c + b * c);
+            int v = a * b * c;
+            Console.WriteLine($"Téglatest oldalhosszai: {a}, {b}, {c}. Felszín: {f}, térfogat: {v}");*/
+
+            /* 13. Feladat:
+            Console.Write("Kérem a kör átmérőjét: ");
+            int d = Int32.Parse(Console.ReadLine());
+            double k = d * Math.PI;
+            double t = (Math.Pow(d, 2) * Math.PI) / 4;
+            Console.WriteLine($"A kör átmérője: {d}, kerülete: {k}, területe: {t}");*/
+
+            /* 14. Feladat:
+            Console.Write("Kérem a kör sugarát: ");
+            int r = Int32.Parse(Console.ReadLine());
+            Console.Write("Kérem a kör központi szögét: ");
+            int alfa = Int32.Parse(Console.ReadLine());
+            double korivHossz = (r * Math.PI * alfa) / 180;
+            double korivTerulet = (Math.Pow(r, 2) * Math.PI * alfa) / 180;
+            Console.WriteLine($"A körív sugara: {r}, központi szöge: {alfa}, hossza: {korivHossz}, területe: {korivTerulet}");*/
             /* 15.Feladat:*//*elso megoldas*/
 
             /* 
@@ -339,7 +420,7 @@ namespace ElsoValodiCharpProjekt
             {
                 return !teljesul;
             }*/
-            /*22.feladat:*/
+            /*22.feladat:
             int szam = 0;
 
             int osszeg = 0;
@@ -362,11 +443,55 @@ namespace ElsoValodiCharpProjekt
                 }
             }
 
-            Console.WriteLine($"Az addig beolvasott számok összege: {osszeg}.");
+            Console.WriteLine($"Az addig
+            beolvasott számok összege: {osszeg}.");*/
+
+            /*Plusz felaadat az osztók összege osztható legyen 7tel */
+            int szam = 0;
+
+            while (HetteloszthatoE(szam))
+             
+                {
+                Console.Write("Kérek egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }
+
+
             Console.ReadKey(true);
+        }
+        static bool HetteloszthatoE(int szam)
+        {
+            bool teljesul = true;
+
+            int osztok = 0;
+
+            int osztokosszeg = 0; 
+
+            for (int i = 1; i <= szam ; i++)
+            {
+                if (szam % i == 0)
+                {
+                    osztok+= i ; 
+                    osztokosszeg ++;
+                }
+            }
+           
+            if (osztokosszeg % 7 == 0)
+            {
+                return teljesul;
+            }
+            else
+            {
+                return !teljesul;
+            }
         }
     }
 }
+
+
+
+            
+
 
 
 
